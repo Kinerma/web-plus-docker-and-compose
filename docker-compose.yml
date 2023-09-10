@@ -8,9 +8,9 @@ services:
     networks:
       - db-network
     volumes:
-      - db-volume:${POSTGRES_PGDATA}
+      - db-volume:${POSTGRES_PG}
     env_file:
-      - .env.db
+      - .env.postgres
 
   backend:
     build: backend
